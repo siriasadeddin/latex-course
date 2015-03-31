@@ -41,13 +41,14 @@
 \begin{frame}[fragile]{¿Cómo trabaja?}
   \begin{itemize}
   \item Escribe tú documento en  \texttt{texto plano} con \cmd{comandos} que describen su estructura y significado.
-  \item El programa \texttt{latex} procesa su text y  comandos para
+  \item El programa \texttt{latex} procesa su texto y  comandos para
     producir un documento de alta calidad tipográfica.
   \end{itemize}
   \vskip 2ex
   \begin{center}
     \begin{minted}[frame=single]{latex}
-      La lluvia en España cae \emph{principalmente} en la llanura.
+La lluvia en Espa\~na cae \emph{principalmente} 
+en la llanura.
     \end{minted}
     \vskip 2ex
     \tikz\node[single arrow,fill=gray,font=\ttfamily\bfseries,%
@@ -62,23 +63,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{Más ejemplos de comandos y sus salidas\ldots}
   \begin{exampletwoup}
-    \begin{itemize}
-    \item T\'e
-    \item Leche
-    \item Galletas
-    \end{itemize}
+\begin{itemize}
+\item T\'e
+\item Leche
+\item Galletas
+\end{itemize}
   \end{exampletwoup}
   \vskip 2ex
   \begin{exampletwoup}
-    \begin{figure}
-      \includegraphics{chick}
-    \end{figure}
+\begin{figure}
+  \includegraphics{chick}
+\end{figure}
   \end{exampletwoup}
   \vskip 2ex
   \begin{exampletwoup}
-    \begin{equation}
-      \alpha + \beta + 1
-    \end{equation}
+\begin{equation}
+  \alpha + \beta + 1
+\end{equation}
   \end{exampletwoup}
   
   \tiny{Imagen de \url{http://www.andy-roberts.net/writing/latex/importing_images}}
@@ -154,17 +155,17 @@
   \item Escriba su texto entre\cmdbegin{document} y \cmdend{document}.
   \item En su mayoría, puede escribir texto normalmente.
     \begin{exampletwouptiny}
-      Las palabras se separan por uno 
-      o m\'as espacios.
-      
-      Los p\'arrafos se separan por 
-      uno o m\'as lineas en blanco.
+Las palabras se separan por uno 
+o m\'as espacios.
+
+Los p\'arrafos se separan por 
+uno o m\'as lineas en blanco.
     \end{exampletwouptiny}
   \item Los espacios de más en el archivo fuentes son eliminados en la salida. 
     \begin{exampletwouptiny}
-      La   lluvia    en Espa\~na
-      cae principalmente   sobre 
-      la llanura.
+La   lluvia    en Espa\~na
+cae principalmente   sobre 
+la llanura.
     \end{exampletwouptiny}
   \end{itemize}
 \end{frame}
@@ -195,7 +196,7 @@
     que alguno de estos caracteres aparezcan en la salida, se tiene que
     preceder con una barra invertida al caracter.
     \begin{exampletwoup}
-      \$\%\&\#!
+\$\%\&\#!
     \end{exampletwoup}
   \end{itemize}
 \end{frame}
@@ -215,7 +216,7 @@
   \end{itemize}
   \begin{block}{Indicaciones sobre Errores}
     \begin{enumerate}
-    \item No se asuste! Errores suceden.
+    \item No se asuste! Los errores suceden.
     \item Corregirlos a medida que se vayan presentando --- si lo que
       acabas de escribir causa un error, puedes comenzar a depurar por ahí.
     \item Si hay múltiples errores, comienza por el primero de ellos
@@ -260,12 +261,12 @@
     usamos para marcar contenido  matemático en el texto.\\[1ex]
     \begin{exampletwouptiny}
 % no tan bueno:
-Sean a y b distintos n\'meros 
+Sean a y b distintos n\'umeros 
 enteros positivos, y digamos 
 que c = a - b + 1.
       
 % mucho mejor:
-Sean $a$ y $b$ distintos n\'meros
+Sean $a$ y $b$ distintos n\'umeros
 enteros positivos, y digamos 
 que  $c = a - b + 1$.
     \end{exampletwouptiny}
@@ -408,7 +409,8 @@ para mostrarlo en un entorno diferente.
 \documentclass{article}
 \usepackage{amsmath} % pre\'ambulo
 \begin{document}
-% ahora podemos usar los comandos desde el paquete amsmath...
+% ahora podemos usar los comandos desde el 
+% paquete amsmath...
 \end{document}
   \end{minted}
 \end{itemize}
@@ -464,11 +466,11 @@ para mostrarlo en un entorno diferente.
       
       % for whatever reason, this doesn't play well with the twoup environment
       \begin{minted}[fontsize=\small,frame=single]{latex}
-        \begin{align*}
-          (x+1)^3 &= (x+1)(x+1)(x+1) \\
-          &= (x+1)(x^2 + 2x + 1) \\
-          &= x^3 + 3x^2 + 3x + 1
-        \end{align*}
+\begin{align*}
+  (x+1)^3 &= (x+1)(x+1)(x+1) \\
+  &= (x+1)(x^2 + 2x + 1) \\
+  &= x^3 + 3x^2 + 3x + 1
+\end{align*}
       \end{minted}
     \item El ampersand \keystrokebftt{\&} separa la columna izquierda
       (antes del $=$) de la columna derecha (después del $=$).
