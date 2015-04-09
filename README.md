@@ -1,22 +1,19 @@
 latex-course
 ============
 
-Slides for an introductory course on LaTeX. The slides and their LaTeX source
-code are provided in [this github repository](https://github.com/jdleesmiller/latex-course) under a permissive MIT license.
+Diapositivas para un curso introductorio de LaTeX. Estas presentaciones y sus respectivos códigos fuentes se encuentran disponibles en [este repositorio de github]((https://github.com/guanucoluis/latex-course) bajo la licencia permisiva (MIT license). Es importante aclarar que esta versión se encuentra basada en el trabajo original de John Lees-Miller. Se puede acceder a la versión en inglés desde su repositorio [latex-course](https://github.com/jdleesmiller/latex-course).
 
-The aim is to get students writing in LaTeX as quickly as possible. The material is presented as a set of examples, and broader concepts and techniques are explained as they arise. Each part includes exercises that can be completed on [Overleaf](https://www.overleaf.com), the free online LaTeX editor, so you don't have to worry about getting LaTeX and related tools installed on everyone's computers.
+El principal objetivo es conseguir que un usario puede escribir en LaTeX tan rápido sea posible. El material es presentado como un conjunto de ejemplos, conceptos y técnicas más detalladas a medida que se avanza. Cada Parte incluye ejercitación que puede ser completada sobre la plataforma [Overleaf](https://www.overleaf.com). Overleaf ofrece un editor de LaTeX en forma libre, por lo que no debe preocuparse de las herramientas necesarias para generar documentos LaTeX. Esto le evita tener que instalar los paquetes sobre su computadora. 
 
-These slides were originally used to deliver two two-hour workshops, but there is probably enough material for three workshops, so there are three parts:
+Estas diapositivas fueron pensadas para presentaciones de dos horas en workshops, pero es probable que haya suficiente material para varios talleres, por lo que se dividen en tres partes:
 
-1. [The Basics](http://jdleesmiller.github.io/latex-course/en/part1.pdf): ideas, syntax, equations, environments, packages
+1. [Conceptos Básicos](http://guanucoluis.github.io/latex-course/es/part1.pdf): ideas, sintaxis, ecuaciones, entornos, paquetes.
 
-1. [Structed Documents &
-More](http://jdleesmiller.github.io/latex-course/en/part2.pdf): titles, sections, cross-references, figures, tables, bibliographies.
+1. [Documentos Estructurados y Más](http://guanucoluis.github.io/latex-course/es/part2.pdf): títulos, secciones, referencias cruzadas, figuras, tablas, bibliografías.
 
-1. [Not Just Papers: Presentations & More](http://jdleesmiller.github.io/latex-course/en/part3.pdf): recap exercise, presentations with beamer, drawings with
-tikz.
+1. [No Solo Documentos de Texto: Presentaciones y Más](http://guanucoluis.github.io/latex-course/es/part3.pdf): recapitulación (ejercicios), presentaciones con beamer, dibujos con tikz.
 
-Feel free to use however you like --- contributions welcome!
+Siéntase libre de utilizar como más le guste estos contenidos -- contribuciones, bienvenidas sean!
 
 Development
 -----------

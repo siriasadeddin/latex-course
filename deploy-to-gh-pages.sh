@@ -10,7 +10,7 @@ if ! git diff-index --quiet HEAD --; then
 fi
 
 # build / bundle files that we need to put on the website
-cd en
+cd es
 make latex-course.tgz
 cd ..
 
@@ -19,21 +19,21 @@ rm -rf deploy
 mkdir deploy
 cd deploy
 
-mkdir en
-cd en
-mv ../../en/latex-course.tgz .
+mkdir es
+cd es
+mv ../../es/latex-course.tgz .
 tar xzf latex-course.tgz
 rm latex-course.tgz
 cd ..
 
-echo '<html><head><title>latex-course</title></head><body><a href="https://github.com/jdleesmiller/latex-course">Please see repository.</a></body></html>' > index.html
+echo '<html><head><title>latex-course</title></head><body><a href="https://github.com/guanucoluis/latex-course">Por favor, vea el repositorio.</a></body></html>' > index.html
 
 cd ..
 
 # destroy current content of the gh-pages branch
 git checkout gh-pages
 git rm -rf .
-rm -rf en
+rm -rf es
 mv deploy/* .
 rmdir deploy
 git add .
