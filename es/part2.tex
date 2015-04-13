@@ -124,7 +124,7 @@
       \fbox{\href{\fileuri/structure-exercise-solution.pdf}{%
           Click para abrir el artículo}}
     \end{center}
-    Haga su versión del artículo mirando el artículo original. Utilice
+    Haga su versión del artículo mirando el documento original. Utilice
      \cmdbs{ref} y \cmdbs{eqref} para evitar escribir explícitamente
      la sección y el número de ecuación dentro del texto.
   \end{block}
@@ -204,7 +204,7 @@ angle=270]{big_chick}
 \subsection[fragile]{Flotantes}
 \begin{frame}{\insertsubsection}
   \begin{itemize}
-  \item Permita a \LaTeX{} decidir dónde se ubicará la figura (puede ``flotar'').
+  \item Permita que \LaTeX{} decida dónde ubicar las figuras.
   \item Puede también darle a la figura un título, una etiqueta y así
     ser referenciado con \cmdbs{ref}.
   \end{itemize}
@@ -288,7 +288,7 @@ fila(como en el entorno \bftt{align*} visto en la Parte 1).
 \begin{frame}[fragile]{\insertsubsection{} 2}
   \begin{itemize}
   \item Cada entrada en el archivo  \bftt{.bib} tiene una \emph{clave}
-    que puede usar para ser referenciado en el documento. Por ejemplo,
+    que puede usar para ser citado en el documento. Por ejemplo,
     \bftt{Jacobson1999Towards} es la clave para este artículo:
     \begin{minted}[fontsize=\small,frame=single]{latex}
 @Article{Jacobson1999Towards,
@@ -313,7 +313,7 @@ fila(como en el entorno \bftt{align*} visto en la Parte 1).
       paquete con más características llamado \bftt{biblatex} pero la
       mayoría de las plantillas para artículos todavía utiliza
       \bftt{natbib}.} con \cmdbs{citet} y \cmdbs{citep}.
-  \item Las referencias Bibliográficas van al final del texto con el
+  \item Las referencias bibliográficas van al final del texto con el
     comando \cmdbs{bibliography}, y luego se especifica el estilo con
     \cmdbs{bibliographystyle}.
   \end{itemize}
@@ -413,9 +413,10 @@ $$
 \subsection{Instalación de  \LaTeX{}}
 \begin{frame}{\insertsubsection}
   \begin{itemize}
-  \item Para ejecutar \LaTeX{} sobre su computadora, deberá utilizar
-    una \emph{distribución}. Una distribución incluye un
-    programa \bftt{latex} y (típicamente) varios miles de paquetes.
+  \item Para ejecutar \LaTeX{} sobre su computadora, deberá contar con
+    una \emph{distribución} de las que se encuentran disponible para
+    diferentes plataformas. Una distribución incluye un programa
+    \bftt{latex} y (típicamente) varios miles de paquetes.
     \begin{itemize}
     \item sobre Windows: \href{http://miktex.org/}{Mik\TeX} o \href{http://tug.org/texlive/}{\TeX Live}
     \item Sobre GNU/Linux: \href{http://tug.org/texlive/}{\TeX Live}
