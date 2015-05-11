@@ -13,6 +13,8 @@ Estas diapositivas fueron pensadas para presentaciones de dos horas en workshops
 
 1. [No Solo Documentos de Texto: Presentaciones y Más](http://guanucoluis.github.io/latex-course/es/part3.pdf): recapitulación (ejercicios), presentaciones con beamer, dibujos con tikz.
 
+1. [Adaptando El Documento A Nuestras Necesidades](http://guanucoluis.github.io/latex-course/es/part4.pdf): personalizando el estilo de las páginas, insertar código-fuente, Más sobre: figuras, tablas y bibliografías, dibujos de sistemas analógicos y digitales.
+
 Siéntase libre de utilizar como más le guste estos contenidos -- contribuciones, bienvenidas sean!
 
 Development
