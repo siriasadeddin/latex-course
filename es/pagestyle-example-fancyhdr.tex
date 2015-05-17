@@ -1,0 +1,25 @@
+\documentclass[a5paper]{report}
+\usepackage{kantlipsum,graphicx,lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\title{Informe}
+\author{Alumno}
+\lhead{Nombre y Apellido}
+\chead{\includegraphics[width=0.02\textwidth]
+{images/logoUTN}}
+\rhead{\today}
+\lfoot{Prof: Nombre y Apellido}
+\cfoot{\thepage{} de \pageref{LastPage}}
+\rfoot{Universidad -- Facultad}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+\maketitle
+\chapter{Introducci\'on}
+\kant[1-6]
+
+\section{Antecedentes}
+\kant[6-10]
+\end{document}

@@ -42,12 +42,9 @@ bib-example.pdf: bib-example.tex bib-example.bib
 #
 # Part 3
 #
-part3.pdf: part3.tex preamble.tex recap-structure.pdf recap-exercise.pdf recap-exercise-solution.pdf beamer-minimal.pdf beamer-theme.pdf beamer-exercise.pdf beamer-exercise-solution.pdf
+part3.pdf: part3.tex preamble.tex recap-structure.pdf recap-exercise-solution.pdf beamer-minimal.pdf beamer-theme.pdf beamer-exercise-solution.pdf
 	pdflatex -shell-escape part3
 	pdflatex -shell-escape part3
-
-recap-exercise.pdf: recap-exercise.tex
-	pdflatex recap-exercise
 
 recap-exercise-solution.pdf: recap-exercise-solution.tex
 	pdflatex recap-exercise-solution
@@ -61,18 +58,41 @@ beamer-minimal.pdf: beamer-minimal.tex
 beamer-theme.pdf: beamer-theme.tex
 	pdflatex beamer-theme
 
-beamer-exercise.pdf: beamer-exercise.tex
-	pdflatex beamer-exercise
-
 beamer-exercise-solution.pdf: beamer-exercise-solution.tex
 	pdflatex beamer-exercise-solution
 	pdflatex beamer-exercise-solution
 
-latex-course.tgz: part1.pdf part2.pdf part3.pdf basics-exercise-1-solution.tex basics-exercise-1.tex basics-exercise-2-solution.tex basics-exercise-2.tex basics.tex bib-example.tex preamble.tex structure-exercise-solution.tex structure-exercise-solution.pdf structure-exercise.tex big_chick.png bib-exercise.bib recap-exercise.tex recap-exercise-solution.pdf beamer-minimal.tex beamer-exercise.tex beamer-exercise-solution.pdf gettysburg_graph.png
+#
+# Part 4
+#
+part4.pdf: part4.tex preamble2.tex  pagestyle-example-myheadings.pdf pagestyle-example-fancyhdr.pdf multiple-figures.pdf subfigure-example.pdf biblio-example.pdf
+	pdflatex -shell-escape part4
+	pdflatex -shell-escape part4
+
+pagestyle-example-myheadings.pdf: pagestyle-example-myheadings.tex
+	pdflatex pagestyle-example-myheadings
+
+pagestyle-example-fancyhdr.pdf: pagestyle-example-fancyhdr.tex
+	pdflatex pagestyle-example-fancyhdr
+	pdflatex pagestyle-example-fancyhdr
+
+multiple-figures.pdf: multiple-figures.tex
+	pdflatex multiple-figures
+	pdflatex multiple-figures
+
+subfigure-example.pdf: subfigure-example.tex
+	pdflatex subfigure-example
+	pdflatex subfigure-example
+
+biblio-example.pdf: biblio-example.tex
+	pdflatex biblio-example
+	pdflatex biblio-example
+
+latex-course.tgz: part1.pdf part2.pdf part3.pdf part4.pdf basics-exercise-1-solution.tex basics-exercise-1.tex basics-exercise-2-solution.tex basics-exercise-2.tex basics.tex bib-example.tex preamble.tex structure-exercise-solution.tex structure-exercise-solution.pdf structure-exercise.tex big_chick.png bib-exercise.bib recap-exercise.tex recap-exercise-solution.pdf beamer-minimal.tex beamer-exercise.tex beamer-exercise-solution.pdf gettysburg_graph.png 
 	tar czf latex-course.tgz $^
 
 clean:
-	rm -f *.log *.aux *.out *.nav *.snm *.toc *.vrb *.pyg *.bbl *.blg structure-crossref.pdf structure-sections.pdf structure-title.pdf media-graphics.pdf bib-example.pdf
+	rm -f *.log *.aux *.out *.nav *.snm *.toc *.vrb *.pyg *.bbl *.blg structure-crossref.pdf structure-sections.pdf structure-title.pdf media-graphics.pdf bib-example.pdf beamer-minimal.pdf beamer-theme.pdf recap-structure.pdf pagestyle-example-myheadings.pdf pagestyle-example-fancyhdr.pdf multiple-figures.pdf subfigure-example.pdf biblio-example.pdf
 
 clobber: clean
-	rm -f part1.pdf part2.pdf part3.pdf
+	rm -f part1.pdf part2.pdf part3.pdf part4.pdf

@@ -1,0 +1,681 @@
+\documentclass{beamer}
+%\documentclass[draft]{beamer}
+
+\input{preamble2.tex} %este preábulo es agregado por guanucoluis
+
+\subtitle{Parte 4: Adaptando el documento a nuestras necesidades}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estilo De Las Páginas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Nativos}
+  \begin{itemize}
+  \item \LaTeX{} soporta diferentes combinaciones de cabeceras y
+    pies de páginas. \cmdbs{pagestyle} define cuál emplearse.
+    \begin{itemize}
+    \item \bftt{empty}
+    \item \bftt{plain}
+    \item \bftt{headings}      
+    \item \bftt{myheadings}      
+    \end{itemize}
+  \item Es posible cambiar el estilo de la página actual con la orden
+    pies de páginas \cmdbs{thispagestyle}.
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}[fragile]{\insertsection: Personalizados}
+  El estilo \bftt{myheadings} permite modificar el contenido de
+  la cabecera.\\[2ex]
+  \begin{minipage}{0.5\linewidth}
+    \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+    {pagestyle-example-myheadings.tex}
+  \end{minipage}
+  \begin{minipage}{0.4\linewidth}
+    % trim: l b r t
+    \includegraphics[width=\textwidth,clip,trim=1in 1.1in 1in 1.1in,page=6]{pagestyle-example-myheadings.pdf}
+  \end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{\insertsection: Personalizados}
+  El paquete \bftt{fancyhdr} provee comandos para definir el
+  contenido del lado izquierdo, centro y derecho, tanto del
+  encabezado como el pie de página.\\[2ex]
+  \begin{minipage}{0.5\linewidth}
+    \inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+    {pagestyle-example-fancyhdr.tex}
+  \end{minipage}
+  \begin{minipage}{0.4\linewidth}
+    % trim: l b r t
+    \includegraphics[width=\textwidth,clip,trim=1in 1.1in 1in 1.1in,page=6]{pagestyle-example-fancyhdr.pdf}
+  \end{minipage}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Código Fuente en \LaTeX}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{\insertsection: Entorno \bftt{verbatim}}
+  \begin{itemize}
+  \item El texto encerrado entre \cmdbegin{verbatim} y
+    \cmdend{verbatim} se escribirá directamente, con todos los saltos
+    de línea y espacios, sin ejecutar ninguna orden \LaTeX.\\[1ex]
+    \begin{exampletwouptiny}
+\begin{verbatim}
+#include<stdio.h>
+
+int main()
+{
+  printf("Hello World");
+  return 0;
+}
+\end{verbatim}
+    \end{exampletwouptiny}
+    \vskip 2ex
+  \item Dentro de un párrafo, un comportamiento similar se puede 
+    obtener con \cmdbs{verb}+text+.
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{\insertsection: Paquetes \bftt{verbatim} y \bftt{fancyvrb}}
+  \begin{itemize}
+  \item El paquete \bftt{verbatim} nos permite incluir un fichero de
+    texto como si estuviera dentro de un entorno \bftt{verbatim}.\\[2ex]
+    \begin{exampletwouptiny}
+\verbatiminput{main.c}
+    \end{exampletwouptiny}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{\insertsection: Paquetes \bftt{verbatim} y \bftt{fancyvrb}}
+  \begin{itemize}
+  \item {\small El paquete \bftt{fancyvrb} nos permite incluir un fichero de
+      texto como si estuviera dentro de un entorno \bftt{verbatim}.}\\[2ex]
+  \item {\small Con el paquete \bftt{fancyvrb} se puede realizar
+      tareas comunes a código-fuente, tales como: cambiar la fuente
+      del texto y tamaño, numerar las líneas, etc.}\\[2ex]
+    \begin{exampletwouptiny}
+\VerbatimInput[frame=lines,
+fontshape=sl,
+fontsize=\scriptsize,
+numbers=left,
+formatcom=\color{blue}]
+{main.c}
+    \end{exampletwouptiny}
+
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{\insertsection: Paquete \bftt{listings}}
+  \begin{itemize}
+  \item {\small El paquete \bftt{listings} se utiliza para imprimir
+      código-fuente en \LaTeX{}. El entorno es similar al paquete 
+      \bftt{verbatim}}.
+    \begin{exampletwouptiny}
+\begin{lstlisting}
+  #include<stdio.h>
+  
+  int main()
+  {
+    printf("Hello World");
+    return 0;
+  }
+\end{lstlisting}
+    \end{exampletwouptiny}
+    \vskip 2ex
+  \item {\small Para personalizar el entorno \bftt{listings} se
+      utiliza el comando \cmdbs{lstset}. El código siguiente debe ser
+      agregado en el preámbulo del archivo \LaTeX{}.}
+    \begin{minted}[fontsize=\scriptsize,frame=single]{latex}
+\usepackage{listings}
+\lstset{
+  basicstyle=\tiny, language=c, fancyvrb=false, numbers=left,
+  keywordstyle=\color{blue}\bfseries, frame=shadowbox,
+  morekeywords={printf}, breaklines=true, 
+  rulesepcolor=\color{blue}, stringstyle=\ttfamily}
+    \end{minted}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}[fragile]{\insertsection: Paquete \bftt{minted}}
+  \begin{itemize}
+  \item {\small El paquete \bftt{minted} permite insertar código
+      fuente y resaltar las la sintaxis del lenguaje utilizado. Este
+      paquete utiliza una librería del lenguaje Python
+      (\bftt{python-pygments}).}
+    \vskip 2ex
+    \begin{exampletwouptiny}
+\begin{minted}[fontsize=\tiny,
+  frame=single,
+  linenos=true]{c}
+  #include<stdio.h>
+  
+  int main()
+  {
+    printf("Hello World");
+    return 0;
+  }
+\end{minted}
+    \end{exampletwouptiny}
+    \vskip 2ex
+  \item {\small Los últimos dos paquetes, \bftt{listings} y
+      \bftt{minted}, requieren otros paquetes \LaTeX{} (y en el caso de
+      \bftt{minted} paquetes externos) para poder funcionar
+      correctamente. Se aconseja leer las respectivas documentaciones de
+      la página \href{}{http://ctan.org/}}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Figuras (continuación)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Subfiguras}
+  \begin{itemize}
+  \item Anteriormente
+    (\href{https://raw.github.com/guanucoluis/latex-course/master/es/part2.pdf}{Parte
+      2}) vimos cómo insertar imágenes en \LaTeX{}. En esta parte trataremos
+    casos específicos de la inserción de figuras.
+  \item En el siguiente ejemplo tenemos dos imágenes que se encuentran
+    vinculadas entre sí.
+    \begin{minipage}{0.5\linewidth}
+      \inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+      {multiple-figures.tex}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+      % trim: l b r t
+      \includegraphics[width=\textwidth,clip,trim=1in 1.1in 1in 1.1in,page=4]{multiple-figures.pdf}   
+    \end{minipage}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Subfiguras}
+  \begin{itemize}
+  \item Para mejorar la hoja anterior se usan los paquetes
+    \bftt{caption} y \bftt{subcaption}. De esta forma se pueden agregar
+    sub-flotantes en un único flotante.\\
+    \begin{minipage}{0.5\linewidth}
+      \inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+      {subfigure-example.tex}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+      % trim: l b r t
+      \includegraphics[width=\textwidth,clip,trim=1in 1.1in 1in 1.1in,page=4]{subfigure-example.pdf}   
+    \end{minipage}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bibliografía (continuación)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{\insertsection: El entorno \bftt{thebibliography}}
+  \begin{itemize}
+  \item En la
+    \href{https://raw.github.com/guanucoluis/latex-course/master/es/part2.pdf}{Parte
+      2} se mostró como utilizar bases de datos de bibliografías para
+    nuestros documentos \LaTeX{}. Pero para el caso de querer generar
+    un simple reporte, el proceso de compilación con \bftt{bibtex}
+    resulta lento.
+  \item \LaTeX{} provee un entorno llamado \bftt{thebibliography}. De
+    esta forma se puede agregar bibliografía en nuestro documento sin
+    la necesidad de llamar a \bftt{bibtex}.
+    \vskip 2ex
+    \begin{minted}[fontsize=\small,frame=single]{latex}
+\begin{thebibliography}{1}
+
+\bibitem{lamport94}
+  Leslie Lamport,
+  \emph{\LaTeX: a document preparation system},
+  Addison Wesley, Massachusetts,
+  2nd edition,
+  1994.
+
+\end{thebibliography}
+    \end{minted}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: El entorno \bftt{thebibliography}}
+  \begin{itemize}
+  \item A continuación se muestra el mismo ejemplo utilizado con
+    \bftt{bibtex}.
+    \vskip 2ex
+    \begin{minipage}{0.5\linewidth}
+      \inputminted[fontsize=\tiny,frame=single,resetmargins]{latex}%
+      {biblio-example.tex}
+    \end{minipage}
+    \begin{minipage}{0.4\linewidth}
+      % trim: l b r t
+      \includegraphics[width=\textwidth,clip,trim=1in 1.1in 1in 1.1in]{biblio-example.pdf}   
+    \end{minipage}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Dibujando con circui\protect\tikzname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection}
+  \begin{itemize}
+    \item El paquete circui\tikzname{} provee macros para componer
+      diagramas eléctricos/electrónicos  en \LaTeX{}.
+    \item Solo debemos cargar el paquete \bftt{circuitikz}. Éste
+      cargará automáticamente el paquete \bftt{tikz}.
+    \vskip 2ex
+    \begin{exampletwouptiny}
+\ctikzset{bipoles/length=1cm}
+\begin{circuitikz}
+  [scale=0.9]
+  \draw[help lines, green]
+  (0,0) grid (2,2);
+  \draw 
+  (0,0) to[sV=5<\volt>]
+  (0,2) to[R=47<\ohm>]
+  (2,2) to[L=5<\milli\henry>]
+  (2,0) to[C=10<\micro\farad>]
+  (0,0);
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection}
+  \begin{itemize}
+  \item Al igual que muchos paquetes que hemos utilizado,
+    circui\tikzname{} permite recibir opciones para personalizar su uso.
+    \vskip 2ex
+    \begin{minted}[fontsize=\footnotesize,frame=single]{latex}
+\usepackage[american,cuteinductors,siunitx]{circuitikz}
+\usepackage{siunitx}
+    \end{minted}
+  \item En función de los argumentos opcionales del ejemplo anterior tenemos:
+    \begin{description}
+    \item[\bftt{american}] define qué simbología se utilizará. En este
+      caso las estándares americanas.
+    \item[\bftt{cuteinductors}] permite que el símbolo del inductor
+      se encuentre más ondulado que el estándar.
+    \item[\bftt{siunitx}] informa a \tikzname{} que utilizará las
+      definiciones de unidades desde el paquete \bftt{siunitx}.
+    \end{description}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Tipos de Componentes}
+  \begin{itemize}
+  \item Monopolares\\
+    \begin{exampletwouptiny}
+\begin{circuitikz}
+  \draw node[ground]{GND};
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \item Bipolares\\
+    \begin{exampletwouptiny}
+\begin{circuitikz} 
+\ctikzset{bipoles/length=1cm}
+\draw (0,0) to
+[R=$R_1$,i=$i_1$,v=$v_1$,o-*] (2,0);
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \item Tripolar\\
+    \begin{exampletwouptiny}
+\begin{circuitikz}
+  \draw (0,0) node[npn](npn){T1}
+  (npn.base) node[anchor=east]{B}
+  (npn.collector) node[anchor=south]{C}
+  (npn.emitter) node[anchor=north]{E};
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Tipos de Componentes}
+  \begin{itemize}
+  \item Doble-bipolares\\[1ex]
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) node[transformer](T){}
+  (T.A1) node[anchor=east] {A1}
+  (T.A2) node[anchor=east] {A2}
+  (T.B1) node[anchor=west] {B1}
+  (T.B2) node[anchor=west] {B2}
+  (T.base) node{N=$\frac{1}{20}$};
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \item Compuertas lógicas\\[1ex]
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) node[and port](myand) {}
+  (myand.in 1) node[anchor=east] {A}
+  (myand.in 2) node[anchor=east] {B}
+  (myand.out) node[anchor=west] {O};
+  \draw (myand) 
+  node[below=6mm]{$O = A \cdot B$};
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Tipos de Componentes}
+  \begin{itemize}
+  \item Amplificadores
+    \begin{itemize}
+    \item Operacionales\\[1ex]
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) node[op amp] (opamp){}
+  (opamp.+) node[left]{$v_+$}
+  (opamp.-) node[left]{$v_-$}
+  (opamp.out) node[right]{$v_o$}
+  (opamp.down) node[ground]{}
+  (opamp.up) ++ (0,.5) node[above]
+  {\SI{12}{\volt}} -- (opamp.up);
+\end{circuitikz}
+    \end{exampletwouptiny}
+    \item \textsl{Buffers}\\[1ex]
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) node[buffer] (buf){}
+  (buf.in) node[left]{In}
+  (buf.out) node[right]{Out};
+\end{circuitikz}
+    \end{exampletwouptiny}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Integración con \bftt{siunitx}}
+  \begin{itemize}
+  \item Existen dos modos de utilizar las unidades con el paquete
+    \bftt{siunitx}\\[1ex]
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) to[R, l=1<\kilo\ohm>]
+  (2,0);
+\end{circuitikz}
+    \end{exampletwouptiny}
+    \vskip 2ex
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) to[R, l=\SI{1}{\kilo\ohm}]
+  (2,0);
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Espejado de componentes}
+  \begin{itemize}
+  \item En el momento de instanaciar un componente, se puede
+    especificar que el símbolo sea espejado.\\[1ex]
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) to[ospst=T,v=v,i=$i_1$]
+  (2,0);
+\end{circuitikz}
+    \end{exampletwouptiny}
+    \vskip 2ex
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) to[ospst=T,mirror,v=v,i=$i_1$]
+  (2,0);
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \item Tener en cuenta que el \bftt{label} también se modifica. Pero
+    esto no sucede en el caso de la indicación de corriente.
+    \vskip 2ex
+    \begin{exampletwouptiny}
+\begin{circuitikz} \draw 
+  (0,0) to[ospst=T,mirror,v=v,i=$i_1$]
+  (2,0);
+\end{circuitikz}
+    \end{exampletwouptiny}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Parámetros de Circui\tikzname{}}
+  \begin{itemize}
+  \item La mayoría de los macros que provee circui\tikzname{} hacen
+    uso de los \bftt{pgfkeys} para la configuración de las imágenes
+    que ofrece. Recuerde que Circui\tikzname{} utiliza el paquete
+    \tikzname{}.
+  \item Para manipular las macros utilizamos el comando \cmdbs{ctikzset}.\\[1ex]
+    \begin{exampletwouptiny}
+\tikz \draw (0,0) to[R=1<\ohm>](2,0); 
+\par
+\ctikzset{bipoles/resistor/height=.6}
+\tikz \draw (0,0) to[R=1<\ohm>](2,0);
+    \end{exampletwouptiny}
+    \vskip 2ex
+    \begin{exampletwouptiny}
+\tikz \draw 
+(0,0) to[C, i=1<\milli\ampere>] (2,0); 
+\par
+\ctikzset{current/distance=.8}
+\tikz \draw 
+(0,0) to[C, i=1<\milli\ampere>] (2,0); 
+    \end{exampletwouptiny}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Tamaño de los componentes}
+  \begin{itemize}
+  \item Tal vez el parámetro más importante sea
+    \cmdbs{circuitikzbasekey/bipoles/length}, que puede considerarse
+    como el largo de un resistor; todas las demás longitudes serán
+    relativa a este \bftt{key}.\\[1ex]
+    \begin{minted}[fontsize=\footnotesize,frame=single]{latex}
+\ctikzset{bipoles/length=1.4cm}
+\begin{circuitikz}[scale=1.2]\draw
+...
+    \end{minted}
+    \vskip 2ex
+\ctikzset{bipoles/length=1.4cm}
+\begin{center}
+\begin{circuitikz}[scale=1.2]\draw
+  (0,0) node[anchor=east] {B}
+  to[short , o-*] (1,0)
+  to[R=20<\ohm>, *-*] (1,2)
+  to[R=10<\ohm>, v=$v_x$] (3,2) -- (4,2)
+  to[ cI=$\frac{\si{\siemens}}{5} v_x$, *-*] (4,0) -- (3,0)
+  to[R=5<\ohm>, *-*] (3,2)
+  (3,0) -- (1,0)
+  (1,2) to[short , -o] (0,2) node[anchor=east]{A};
+\end{circuitikz}
+\end{center}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Tamaño de los componentes}
+  \begin{itemize}
+  \item Tal vez el parámetro más importante sea
+    \cmdbs{circuitikzbasekey/bipoles/length}, que puede considerarse
+    como el largo de un resistor; todas las demás longitudes serán
+    relativa a este \bftt{key}.\\[1ex]
+    \begin{minted}[fontsize=\footnotesize,frame=single]{latex}
+\ctikzset{bipoles/length=.8cm}
+\begin{circuitikz}[scale=1.2]\draw
+...
+    \end{minted}
+    \vskip 2ex
+\ctikzset{bipoles/length=.8cm}
+\begin{center}
+\begin{circuitikz}[scale=1.2]\draw
+  (0,0) node[anchor=east] {B}
+  to[short , o-*] (1,0)
+  to[R=20<\ohm>, *-*] (1,2)
+  to[R=10<\ohm>, v=$v_x$] (3,2) -- (4,2)
+  to[ cI=$\frac{\si{\siemens}}{5} v_x$, *-*] (4,0) -- (3,0)
+  to[R=5<\ohm>, *-*] (3,2)
+  (3,0) -- (1,0)
+  (1,2) to[short , -o] (0,2) node[anchor=east]{A};
+\end{circuitikz}
+\end{center}
+  \end{itemize}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Varios ejemplos}
+  \begin{itemize}
+  \item Revise
+    \href{http://texample.net}{\TeX{}ample.net} para
+    muchos ejemplos de \fbox{\href{http://texample.net/tikz/examples/tag/circuitikz/}{Circui\tikzname{}}}:
+  \end{itemize}
+  \begin{figure}
+    \href{http://texample.net/tikz/examples/mosfet/}{%
+      \includegraphics[width=0.3\textwidth]{mosfet}}
+    \href{http://texample.net/tikz/examples/collpits/}{%
+      \includegraphics[width=0.3\textwidth]{collpits}}
+    \href{http://texample.net/tikz/examples/4-bit-counter/}{%
+      \includegraphics[width=0.3\textwidth]{4-bit-counter}}
+  \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Compilación en Consola}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: pdf\LaTeX{}}
+  \begin{itemize}
+  \item Tal vez el parámetro más importante sea
+    \cmdbs{circuitikzbasekey/bipoles/length}, que puede considerarse
+    como el largo de un resistor; todas las demás longitudes serán
+    relativa a este \bftt{key}.\\[1ex]
+    \begin{minted}[fontsize=\footnotesize,frame=single]{latex}
+\ctikzset{bipoles/length=.8cm}
+\begin{circuitikz}[scale=1.2]\draw
+...
+    \end{minted}
+    \vskip 2ex
+\ctikzset{bipoles/length=.8cm}
+\begin{center}
+\begin{circuitikz}[scale=1.2]\draw
+  (0,0) node[anchor=east] {B}
+  to[short , o-*] (1,0)
+  to[R=20<\ohm>, *-*] (1,2)
+  to[R=10<\ohm>, v=$v_x$] (3,2) -- (4,2)
+  to[ cI=$\frac{\si{\siemens}}{5} v_x$, *-*] (4,0) -- (3,0)
+  to[R=5<\ohm>, *-*] (3,2)
+  (3,0) -- (1,0)
+  (1,2) to[short , -o] (0,2) node[anchor=east]{A};
+\end{circuitikz}
+\end{center}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}
+  \begin{center}
+    Thanks!
+  \end{center}
+\end{frame}
+
+\end{document}
