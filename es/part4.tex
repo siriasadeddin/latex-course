@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[draft]{beamer}
 
 \input{preamble2.tex} %este preábulo es agregado por guanucoluis
 
@@ -634,36 +634,321 @@ formatcom=\color{blue}]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Compilación en Consola}
+\section{Compilación bajo Consola}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Flujo de compilación}
+  \begin{block}{}
+  Tanto la plataforma \href{https://www.overleaf.com}{Overleaf}
+  y el software \href{http://www.xm1math.net/texmaker/}{TexMaker} nos
+  permiten obtener una salida PDF a partir de texto plano
+  (archivo.tex). Pero en ningún momento intervenimos en el proceso de
+  \emph{compilación}.    
+  \end{block}
+  \vskip 2ex
+  \begin{center}
+    \includegraphics[width=\textwidth]{texmakertop_big}
+  \end{center}    
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: Flujo de compilación}
+  
+  \begin{block}{}
+    Para independizarse de cualquier plataforma o interfaz, se
+    presenta el flujo de compilación que nos permite alcanzar un
+    archivo de salida a partir de texto fuente \LaTeX{}.
+  \end{block}
+  \vskip 2ex
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{latex-flow}
+    \caption{Basado en la imagen
+\href{http://commons.wikimedia.org/wiki/File:LaTeX\_diagram.svg\#/media/File:LaTeX\_diagram.svg}{``LaTeX
+  diagram''} de Alessio Damato. Publicado bajo licencia \href{http://creativecommons.org/licenses/by-sa/3.0/}{CC BY-SA 3.0}.}
+  \end{figure}
+%  \begin{center}
+%    \includegraphics[width=\textwidth]{latex-flow}
+%  \end{center}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsection: pdf\LaTeX{}}
   \begin{itemize}
-  \item Tal vez el parámetro más importante sea
-    \cmdbs{circuitikzbasekey/bipoles/length}, que puede considerarse
-    como el largo de un resistor; todas las demás longitudes serán
-    relativa a este \bftt{key}.\\[1ex]
-    \begin{minted}[fontsize=\footnotesize,frame=single]{latex}
-\ctikzset{bipoles/length=.8cm}
-\begin{circuitikz}[scale=1.2]\draw
-...
-    \end{minted}
+  \item Tanto la herramienta \bftt{latex} como \bftt{pdflatex}
+    proporcionan un archivo de salida listo para ser impreso.
+  \item El formato PDF es el más utilizado y por lo tanto se utilizará
+    \bftt{pdflatex} para compilar nuestros archivos \LaTeX{}.
     \vskip 2ex
-\ctikzset{bipoles/length=.8cm}
-\begin{center}
-\begin{circuitikz}[scale=1.2]\draw
-  (0,0) node[anchor=east] {B}
-  to[short , o-*] (1,0)
-  to[R=20<\ohm>, *-*] (1,2)
-  to[R=10<\ohm>, v=$v_x$] (3,2) -- (4,2)
-  to[ cI=$\frac{\si{\siemens}}{5} v_x$, *-*] (4,0) -- (3,0)
-  to[R=5<\ohm>, *-*] (3,2)
-  (3,0) -- (1,0)
-  (1,2) to[short , -o] (0,2) node[anchor=east]{A};
-\end{circuitikz}
-\end{center}
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{rout}
+luis@luis-laptop:$ pdflatex structure-title.tex 
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+...
+(./structure-title.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, 
+...
+celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish
+loaded.
+...
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+No file structure-title.aux.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./structure-title.aux) 
+)</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on structure-title.pdf (1 page, 44792 bytes).
+Transcript written on structure-title.log.
+      \end{minted}
+    \end{center}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: pdf\LaTeX{}}
+  \begin{itemize}
+  \item \bftt{pdflatex} dispone de varias opciones. Para obtener un
+    resumen de éstas se puede lanzar el comando \bftt{pdflatex --help}.
+    \vskip 1ex
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{rout}
+luis@luis-laptop:$ pdflatex --help
+Usage: pdftex [OPTION]... [TEXNAME[.tex]] [COMMANDS]
+   or: pdftex [OPTION]... \FIRST-LINE
+   or: pdftex [OPTION]... &FMT ARGS
+...
+  If no arguments or options are specified, prompt for input.
+
+-draftmode              switch on draft mode (generates no output PDF)
+[-no]-file-line-error   disable/enable file:line:error style messages
+-halt-on-error          stop processing at the first error
+-jobname=STRING         set the job name to STRING
+-output-comment=STRING  use STRING for DVI file comment instead of date
+                          (no effect for PDF)
+-output-directory=DIR   use existing DIR as the directory to write files in
+-output-format=FORMAT   use FORMAT for job output; FORMAT is `dvi' or `pdf'
+[-no]-shell-escape      disable/enable \write18{SHELL COMMAND}
+-shell-restricted       enable restricted \write18
+-src-specials           insert source specials into the DVI file
+-8bit                   make all characters printable by default
+-help                   display this help and exit
+-version                output version information and exit
+      \end{minted}
+    \end{center}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: pdf\LaTeX{}}
+  \begin{itemize}
+  \item El proceso de compilación genera archivos temporales. Los más
+    comunes son;
+    \begin{description}{\scriptsize
+      \item[\bftt{latexfile.aux}] archivo que conserva información de
+        una compilación a la siguiente (por ejemplo, en las referencias
+        cruzadas).
+      \item[\bftt{latexfile.log}] registra información detallada de la
+        compilación (por ejemplo, paquetes cargados, mensajes de warning y
+        errores).}
+    \end{description}
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{rout}
+luis@luis-laptop:$ ls -l
+-rw-r--r-- 1 luis luis      8 may 17 22:05 structure-title.aux
+-rw-r--r-- 1 luis luis   3762 may 17 22:05 structure-title.log
+-rw-r--r-- 1 luis luis  44792 may 17 22:05 structure-title.pdf
+-rw-r--r-- 1 luis luis    179 mar 28 16:06 structure-title.tex
+      \end{minted}
+    \end{center}
+  \item Los archivos generados depende de la complejidad y demanda
+    del archivo fuente. Sí estaríamos utilizando el comando
+    \cmdbs{tableofcontents} seguramente tendríamos un archivo
+    auxiliar \bftt{latexfile.toc}.
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: pdf\LaTeX{}}
+  \begin{itemize}
+  \item La salida estándar de \bftt{pdflatex}, que se guarda en el
+    archivo \bftt{.log}, proporciona información útil al editor. 
+  \item Consideremos que estamos utilizando referencias cruzadas y es
+    la primera vez que se compila. \bftt{pdflatex} le avisará que no
+    encuentra las correspondientes referencias existentes.
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single,linenos=true]{rout}
+luis@luis-laptop:$ pdflatex structure-crossref.tex 
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+ restricted \write18 enabled.
+entering extended mode
+(./structure-crossref.tex
+LaTeX2e <2011/06/27>
+...
+No file structure-crossref.aux.
+
+LaTeX Warning: Reference `sec:metodo' on page 1 undefined on input line 8.
+LaTeX Warning: Reference `eq:euler' on page 1 undefined on input line 19.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+(./structure-crossref.aux)
+
+LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+ )
+...
+Output written on structure-crossref.pdf (1 page, 47567 bytes).
+Transcript written on structure-crossref.log.
+      \end{minted}
+    \end{center}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: pdf\LaTeX{}}
+  \begin{itemize}
+  \item Las líneas \texttt{10} y \texttt{11} de la salida estándar de
+    la compilación son consecuencia de no contar con las referencias
+    previamente generadas. La línea \texttt{8} informa que no existe
+    una compilación previa.
+  \item Si nuevamente compilamos, veremos una salida diferente.
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{rout}
+luis@luis-laptop:$ pdflatex structure-crossref.tex 
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+ restricted \write18 enabled.
+entering extended mode
+(./structure-crossref.tex
+LaTeX2e <2011/06/27>
+...
+(./structure-crossref.aux) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+}] (./structure-crossref.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb>
+Output written on structure-crossref.pdf (1 page, 38880 bytes).
+Transcript written on structure-crossref.log.
+      \end{minted}
+    \end{center}
+  \end{itemize}
+\end{frame}
+%$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: la herramienta \bftt{make}}
+  \begin{itemize}
+  \item Cuando se trabaja con proyectos complejos resulta tedioso el
+    proceso de re-compilar una y otra vez los archivos fuentes.
+  \item Sí sabemos los comandos que debemos utilizar, podríamos
+    encontrar una herramienta que realice los pasos correctos hasta
+    obtener nuestro documento final, o quizá eliminar los archivos
+    auxiliares, etc.
+    
+    \begin{block}{\bftt{make}}
+      {\scriptsize Software integrado a los sistemas operativos
+      GNU/Linux que permite automatizar procesos. Una de las ventajas
+      es que puede hacer uso de todos los programas con los que cuenta
+      el sistema operativo.}
+    \end{block}
+
+  \item \bftt{make} lee por defecto un archivo \bftt{Makefile} en el
+    directorio donde se ejecuta. 
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: la herramienta \bftt{make}}
+  \begin{itemize}
+    \item El archivo \bftt{Makefile} básico para compilar el documento
+      con referencias cruzadas sería,
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{makefile}
+structure-crossref.pdf: structure-crossref.tex
+	pdflatex structure-crossref
+	pdflatex structure-crossref
+      \end{minted}
+    \end{center}
+  \item Para ejecutar y realizar la compilación se debería lanzar el
+    comando \bftt{make} en la consola (ubicado ya en el directorio
+    donde se encuentran tanto el \bftt{Makefile} como también los
+    archivos fuentes.
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{rout}
+luis@luis-laptop:$ ls
+Makefile  structure-crossref.tex
+luis@luis-laptop:$ make
+pdflatex structure-crossref
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+...
+Output written on structure-crossref.pdf (1 page, 47567 bytes).
+Transcript written on structure-crossref.log.
+pdflatex structure-crossref
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian)
+...
+Output written on structure-crossref.pdf (1 page, 38880 bytes).
+Transcript written on structure-crossref.log.
+      \end{minted}
+    \end{center}
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]{\insertsection: la herramienta \bftt{make}}
+  \begin{itemize}
+    \item Se pueden programar mecanismos independientes y la
+      herramienta procesará al ser llamados por su etiqueta,
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{makefile}
+structure-crossref.pdf: structure-crossref.tex
+	pdflatex structure-crossref
+	pdflatex structure-crossref
+
+file-to-send.tgz:  structure-crossref.tex structure-crossref.pdf
+	tar czf latex-course.tgz $^
+
+clean:
+	rm -f *.log *.aux 
+      \end{minted}
+    \end{center}
+  \item En el caso de querer eliminar todos los archivos temporales
+    podemos llamar a la función \bftt{clean} definida en el ítem
+    anterior.
+    \begin{center}
+      \begin{minted}[fontsize=\tiny,frame=single]{rout}
+luis@luis-laptop:$ ls
+Makefile  structure-crossref.tex structure-crossref.log structure-crossref.aux
+luis@luis-laptop:$ make clean
+rm -f *.log *.aux 
+luis@luis-laptop:$ ls
+Makefile  structure-crossref.pdf  structure-crossref.tex
+      \end{minted}
+    \end{center}
   \end{itemize}
 \end{frame}
 
