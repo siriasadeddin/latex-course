@@ -11,7 +11,7 @@ Estas diapositivas fueron pensadas para presentaciones de dos horas en workshops
 
 1. [Documentos Estructurados y Más](http://guanucoluis.github.io/latex-course/es/part2.pdf): títulos, secciones, referencias cruzadas, figuras, tablas, bibliografías.
 
-1. [No Solo Documentos de Texto: Presentaciones y Más](http://guanucoluis.github.io/latex-course/es/part3.pdf): recapitulación (ejercicios), presentaciones con beamer, dibujos con tikz.
+1. [No Sólo Documentos de Texto: Presentaciones y Más](http://guanucoluis.github.io/latex-course/es/part3.pdf): recapitulación (ejercicios), presentaciones con beamer, dibujos con tikz.
 
 1. [Adaptando El Documento A Nuestras Necesidades](http://guanucoluis.github.io/latex-course/es/part4.pdf): personalizando el estilo de las páginas, insertar código-fuente, Más sobre: figuras, tablas y bibliografías, dibujos de sistemas analógicos y digitales, manejo de comandos de compilación (pdflatex y make).
 
