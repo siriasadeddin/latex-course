@@ -3,7 +3,7 @@ latex-course
 
 Diapositivas para un curso introductorio de LaTeX. Estas presentaciones y sus respectivos códigos fuentes se encuentran disponibles en [este repositorio de github](https://github.com/guanucoluis/latex-course) bajo la licencia permisiva (MIT license). Es importante aclarar que esta versión se encuentra basada en el trabajo original de John Lees-Miller. Se puede acceder a la versión en inglés desde su repositorio [latex-course](https://github.com/jdleesmiller/latex-course).
 
-El principal objetivo es conseguir que un usario puede escribir en LaTeX tan rápido sea posible. El material es presentado como un conjunto de ejemplos, conceptos y técnicas más detalladas a medida que se avanza. Cada Parte incluye ejercitación que puede ser completada sobre la plataforma [Overleaf](https://www.overleaf.com). Overleaf ofrece un editor de LaTeX en forma libre, por lo que no debe preocuparse de las herramientas necesarias para generar documentos LaTeX. Esto le evita tener que instalar los paquetes sobre su computadora. 
+El principal objetivo es conseguir que un usuario pueda escribir en LaTeX tan rápido com sea posible. El material es presentado como un conjunto de ejemplos, conceptos y técnicas más detalladas a medida que se avanza. Cada parte incluye ejercitación que puede ser completada sobre la plataforma [Overleaf](https://www.overleaf.com). Overleaf ofrece un editor de LaTeX en forma libre, por lo que no debe preocuparse de las herramientas necesarias para generar documentos LaTeX. Esto le evita tener que instalar los paquetes en su computadora. 
 
 Estas diapositivas fueron pensadas para presentaciones de dos horas en workshops, pero es probable que haya suficiente material para varios talleres, por lo que se dividen en tres partes:
 
