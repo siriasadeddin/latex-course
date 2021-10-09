@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[a5paper]}\PYG{n+nb}{\PYGZob{}}report\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}kantlipsum,graphicx\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}title}\PYG{n+nb}{\PYGZob{}}Informe\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}author}\PYG{n+nb}{\PYGZob{}}Alumno\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}maketitle}
+\PYG{k}{\PYGZbs{}chapter}\PYG{n+nb}{\PYGZob{}}Introducci\PYG{k}{\PYGZbs{}\PYGZsq{}}on\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}kant}\PYG{n+na}{[1\PYGZhy{}3]}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}[h]\PYG{k}{\PYGZbs{}centering}
+  \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=.6\PYGZbs{}textwidth]}
+  \PYG{n+nb}{\PYGZob{}}es/board\PYGZhy{}3d\PYGZhy{}mod\PYG{n+nb}{\PYGZcb{}}  
+  \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}Modelo 3D de la placa.\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}[h]\PYG{k}{\PYGZbs{}centering}
+  \PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=.6\PYGZbs{}textwidth]}
+  \PYG{n+nb}{\PYGZob{}}es/board\PYGZhy{}photo\PYG{n+nb}{\PYGZcb{}}  
+  \PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}Fotograf\PYG{k}{\PYGZbs{}\PYGZsq{}}ia de la placa.\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

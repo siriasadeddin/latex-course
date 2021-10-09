@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}minted\PYG{n+nb}{\PYGZcb{}}[fontsize=\PYG{k}{\PYGZbs{}tiny},
+  frame=single,
+  linenos=true]\PYG{n+nb}{\PYGZob{}}c\PYG{n+nb}{\PYGZcb{}}
+  \PYGZsh{}include\PYGZlt{}stdio.h\PYGZgt{}
+
+  int main()
+  \PYG{n+nb}{\PYGZob{}}
+    printf(\PYGZdq{}Hello World\PYGZdq{});
+    return 0;
+  \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}minted\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

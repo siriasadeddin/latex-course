@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}item} T\PYG{k}{\PYGZbs{}unhbox} \PYG{k}{\PYGZbs{}voidb}@x \PYG{k}{\PYGZbs{}bgroup} \PYG{k}{\PYGZbs{}let} \PYG{k}{\PYGZbs{}unhbox} \PYG{k}{\PYGZbs{}voidb}@x \PYG{k}{\PYGZbs{}setbox} \PYG{k}{\PYGZbs{}@}tempboxa \PYG{k}{\PYGZbs{}hbox} \PYG{n+nb}{\PYGZob{}}e\PYG{k}{\PYGZbs{}global} \PYG{k}{\PYGZbs{}mathchardef} \PYG{k}{\PYGZbs{}accent}@spacefactor \PYG{k}{\PYGZbs{}spacefactor} \PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}let} \PYG{k}{\PYGZbs{}begingroup} \PYG{k}{\PYGZbs{}let} \PYG{k}{\PYGZbs{}typeout} \PYG{k}{\PYGZbs{}protect} \PYG{k}{\PYGZbs{}begingroup} \PYG{k}{\PYGZbs{}def} \PYG{k}{\PYGZbs{}MessageBreak} \PYG{n+nb}{\PYGZob{}}
+(Font)              \PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}let} \PYG{k}{\PYGZbs{}protect} \PYG{k}{\PYGZbs{}immediate\PYGZbs{}write} \PYG{k}{\PYGZbs{}m}@ne \PYG{n+nb}{\PYGZob{}}LaTeX Font Info:     on input line 4.\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}endgroup} \PYG{k}{\PYGZbs{}endgroup} \PYG{k}{\PYGZbs{}relax} \PYG{k}{\PYGZbs{}let} \PYG{k}{\PYGZbs{}ignorespaces} \PYG{k}{\PYGZbs{}relax} \PYG{k}{\PYGZbs{}accent} 19 e\PYG{k}{\PYGZbs{}egroup} \PYG{k}{\PYGZbs{}spacefactor} \PYG{k}{\PYGZbs{}accent}@spacefactor \PYG{k}{\PYGZbs{}futurelet} \PYG{k}{\PYGZbs{}@}let@token \PYG{k}{\PYGZbs{}protect} \PYG{k}{\PYGZbs{}penalty} \PYG{k}{\PYGZbs{}@}M \PYG{k}{\PYGZbs{}hskip} \PYG{k}{\PYGZbs{}z}@skip 
+\PYG{k}{\PYGZbs{}item} Leche
+\PYG{k}{\PYGZbs{}item} Galletas
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

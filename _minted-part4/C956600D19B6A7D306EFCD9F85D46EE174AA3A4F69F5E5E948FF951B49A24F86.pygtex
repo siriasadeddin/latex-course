@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[a5paper]}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}kantlipsum\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}cite}\PYG{n+nb}{\PYGZob{}}Brooks1997Methodology\PYG{n+nb}{\PYGZcb{}} muestra 
+que \PYG{k}{\PYGZbs{}ldots}. Evidentemente todos 
+los n\PYG{k}{\PYGZbs{}\PYGZsq{}}umeros impares son primos 
+\PYG{k}{\PYGZbs{}cite}\PYG{n+nb}{\PYGZob{}}Jacobson1999Towards\PYG{n+nb}{\PYGZcb{}}.
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}thebibliography\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}bibitem}\PYG{n+nb}{\PYGZob{}}Brooks1997Methodology\PYG{n+nb}{\PYGZcb{}}
+  Fredrick P. Brooks and 
+  John Kubiatowicz and
+  Christos Papadimitriou,
+  \PYG{k}{\PYGZbs{}emph}\PYG{n+nb}{\PYGZob{}}A Methodology for the Study of the
+    Location\PYGZhy{}Identity Split\PYG{n+nb}{\PYGZcb{}},
+  Proceedings of OOPSLA,
+  1997.
+\PYG{k}{\PYGZbs{}bibitem}\PYG{n+nb}{\PYGZob{}}Jacobson1999Towards\PYG{n+nb}{\PYGZcb{}}
+  Van Jacobson,
+  \PYG{k}{\PYGZbs{}emph}\PYG{n+nb}{\PYGZob{}}Towards the Analysis of Massive 
+    Multiplayer Online Role\PYGZhy{}Playing Games\PYG{n+nb}{\PYGZcb{}},
+  Journal of Ubiquitous Information,
+  1999.  
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}thebibliography\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

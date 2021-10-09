@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}listings\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}lstset}\PYG{n+nb}{\PYGZob{}}
+  basicstyle=\PYG{k}{\PYGZbs{}tiny}, language=c, fancyvrb=false, numbers=left,
+  keywordstyle=\PYG{k}{\PYGZbs{}color}\PYG{n+nb}{\PYGZob{}}blue\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}bfseries}, frame=shadowbox,
+  morekeywords=\PYG{n+nb}{\PYGZob{}}printf\PYG{n+nb}{\PYGZcb{}}, breaklines=true,
+  rulesepcolor=\PYG{k}{\PYGZbs{}color}\PYG{n+nb}{\PYGZob{}}blue\PYG{n+nb}{\PYGZcb{}}, stringstyle=\PYG{k}{\PYGZbs{}ttfamily}\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}columns\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}column\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.4\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}item} Utilice los entornos  ...
+    \PYG{k}{\PYGZbs{}item} El argumento ...
+    \PYG{k}{\PYGZbs{}item} Vea tambi\PYG{k}{\PYGZbs{}\PYGZsq{}}en el ...
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}column\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}column\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.6\PYG{k}{\PYGZbs{}textwidth}\PYG{n+nb}{\PYGZcb{}}
+    \PYG{c}{\PYGZpc{} segunda columna}
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}column\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}columns\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

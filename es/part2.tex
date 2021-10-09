@@ -1,6 +1,6 @@
 \documentclass{beamer}
 
-\input{preamble.tex}
+\input{es/preamble.tex}
 
 \subtitle{Parte 2: Documentos Estructurados y Más}
 
@@ -67,7 +67,7 @@
     }\end{itemize}
   \begin{minipage}{0.55\linewidth}
     \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-    {structure-title.tex}
+    {es/structure-title.tex}
   \end{minipage}
   \begin{minipage}{0.35\linewidth}
     \includegraphics[width=\textwidth,clip,trim=2.2in 7in 2.2in 2in]{structure-title.pdf}
@@ -85,7 +85,7 @@
     }\end{itemize}
   \begin{minipage}{0.55\linewidth}
     \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-    {structure-sections.tex}
+    {es/structure-sections.tex}
   \end{minipage}
   \begin{minipage}{0.35\linewidth}
     \includegraphics[width=\textwidth,clip,trim=1.5in 6in 4in 1in]{structure-sections.pdf}
@@ -104,7 +104,7 @@
     }\end{itemize}
   \begin{minipage}{0.55\linewidth}
     \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-    {structure-crossref.tex}
+    {es/structure-crossref.tex}
   \end{minipage}
   \begin{minipage}{0.35\linewidth}
     \includegraphics[width=\textwidth,clip,trim=1.8in 6in 1.6in 1in]{structure-crossref.pdf}
@@ -114,7 +114,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Ejercitación}
+\subsection{Ejercicio}
 \begin{frame}[fragile]{Ejercicio de Documentos Estructurados}
   
   \begin{block}{Escriba este pequeño artículo en \LaTeX:
@@ -130,13 +130,13 @@
   \end{block}
   \vskip 2ex
   \begin{center}
-    \fbox{\href{\wlnewdoc{structure-exercise.tex}}{%
+    \fbox{\href{\wlnewdoc{es/structure-exercise.tex}}{%
         Click para abrir el ejercicio en  \wllogo{}}}
   \end{center}
   
   \begin{itemize}
   \item Una vez que lo haya probado,
-    \fbox{\href{\wlnewdoc{structure-exercise-solution.tex}}{%
+    \fbox{\href{\wlnewdoc{es/structure-exercise-solution.tex}}{%
         click aquí para ver la solución}}.
   \end{itemize}
 \end{frame}
@@ -167,11 +167,11 @@
   \end{itemize}
   \begin{exampletwouptiny}
 \includegraphics[
-width=0.5\textwidth]{big_chick}
+width=0.5\textwidth]{es/big_chick}
 
 \includegraphics[
 width=0.3\textwidth,
-angle=270]{big_chick}
+angle=270]{es/big_chick}
   \end{exampletwouptiny}
   
   \tiny{Imagen desde \url{http://www.andy-roberts.net/writing/latex/importing_images}}
@@ -210,7 +210,7 @@ angle=270]{big_chick}
   \end{itemize}
   \begin{minipage}{0.55\linewidth}
     \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-    {media-graphics.tex}
+    {es/media-graphics.tex}
   \end{minipage}
   \begin{minipage}{0.35\linewidth}
     \includegraphics[width=\textwidth,clip,trim=2in 5in 3in 1in]{media-graphics.pdf}
@@ -276,7 +276,7 @@ fila(como en el entorno \bftt{align*} visto en la Parte 1).
   \begin{itemize}
   \item Colocar las referencias en un archivo \bftt{.bib} en el
     formato de base de datos  `bibtex':
-    \inputminted[fontsize=\scriptsize,frame=single]{latex}{bib-example.bib}
+    \inputminted[fontsize=\scriptsize,frame=single]{latex}{es/bib-example.bib}
   \item La mayoría de los gestores de referencias pueden exportar al
     formato bibtex.
   \end{itemize}
@@ -309,17 +309,14 @@ fila(como en el entorno \bftt{align*} visto en la Parte 1).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]{\insertsubsection{} 3}
   \begin{itemize}
-  \item Utilice el paquete \bftt{natbib} \footnote{Hay un nuevo
-      paquete con más características llamado \bftt{biblatex} pero la
-      mayoría de las plantillas para artículos todavía utiliza
-      \bftt{natbib}.} con \cmdbs{citet} y \cmdbs{citep}.
+  \item Utilice el paquete \bftt{natbib} con \cmdbs{citet} y \cmdbs{citep}.
   \item Las referencias bibliográficas van al final del texto con el
     comando \cmdbs{bibliography}, y luego se especifica el estilo con
     \cmdbs{bibliographystyle}.
   \end{itemize}
   \begin{minipage}{0.55\linewidth}
     \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
-    {bib-example.tex}
+    {es/bib-example.tex}
   \end{minipage}
   \begin{minipage}{0.35\linewidth}
     \includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.8in 1in]{bib-example.pdf}
@@ -329,7 +326,7 @@ fila(como en el entorno \bftt{align*} visto en la Parte 1).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Ejercitación}
+\subsection{Ejercicio}
 \begin{frame}[fragile]{Ejercicio: Coloque Todo Junto}
   
   Agregue una imagen y una bibliografía al artículo desde el ejercicio previo.
@@ -396,12 +393,7 @@ $$
   \begin{itemize}
   \item \bftt{beamer}: para presentaciones
   \item \bftt{todonotes}: comentarios y manejo de ``TODO''(para hacer)
-  \item \bftt{tikz}: hacer increíbles gráficos
-  \item \bftt{pgfplots}: crear gráficos en \LaTeX
   \item \bftt{listings}: impresora de código fuente para \LaTeX
-  \item \bftt{spreadtab}: crear hojas de cálculos en \LaTeX
-  \item \bftt{gchords}, \bftt{guitar}: Acordes de guitarra y tablatura
-  \item \bftt{cwpuzzle}: crucigramas
   \end{itemize}
   Ver \url{https://www.overleaf.com/latex/examples} y \url{http://texample.net}
   para obtener ejemplos de la mayoría de estos paquetes.
@@ -454,166 +446,6 @@ lista de muchas opciones.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-  \begin{center}
-    Gracias!
-  \end{center}
-\end{frame}
+
 
 \end{document}
-
-% -- latex understands words, sentences and paragraphs
-
-Words are separated by one or more spaces.  Paragraphs are separated by
-one or more blank lines.  The output is not affected by adding extra
-spaces or extra blank lines to the input file.
-
-Double quotes are typed like this: ``quoted text''.
-Single quotes are typed like this: `single-quoted text'.
-
-Emphasized text is typed like this: \emph{this is emphasized}.
-Bold       text is typed like this: \textbf{this is bold}.
-
--- Adding structure to your document
-
-\section{Hello}
-
-\subsection{World}
-
-\subsection{Foo}
-
-\subsubsection*{Stuff} % star form
-
-\subsubsection*{Results}
-
--- Labels and cross-references
-
-\label{sec:intro}
-\label{sec:method}
-\ref{sec:method}
-
---> maybe introduce the prettyref package here.
-
--- Mathematics
-
-Inline mathematics: $x + y < 7$.
-
-'Displayed' mathematics:
-\begin{equation}
-\end{equation}
-
-\begin{equation*}
-\end{equation*}
-
-\begin{align}
-\end{align}
-
--- Figures
-
-- Need the graphicx package.
-
-- here we can start introducing options
-
-\includegraphics[width=\textwidth]{}
-
-- where do you find out about these options? --> link to the Wikibook
-
--- Floating Figures
-
-\begin{figure}
-\includegraphics{...}
-\caption{\label{}Here is a caption.}
-\end{figure}
-
--- Tables
-
-- not the nicest part of LaTeX
-
-\usepackage{tabularx}
-
-\begin{tabular}{llr}
-Item & Quantity & Price (\$) & Amount
-Widget & 1 &
-\end{tabular}
-
-Bonus points: check out the fp package and the spreadtab package.
-
--- Document Classes
-
-a .cls file
-
-article
-
-some journal templates come with one
-
--- Bibliographies
-
-
-
--- For Typesetting Geeks
-
-- dashes: -, --, ---
-
-- ellipsis.
-
-- controlling spaces: ~, \ , \,, \@
-
-- spacing after periods (et al., etc.)
-
-- Nested quotation marks: ``\,`
-\vskip 2ex
-\item Use the \emph{star form} to display an equation without a number.
-\begin{exampletwouptiny}
-\begin{equation*}
-F(x) = \int_{a}^{x}{f(t) dt}
-\end{equation*}
-\end{exampletwouptiny}
-
-\begin{itemize}
-\item \bftt{equation} and \bftt{equation*} are called \emph{environments}.
-\begin{itemize}
-  \item The \cmdbs{begin} and \cmdbs{end} commands define the environment.
-  \item The \cmd{\$} also starts and ends an environment.
-  \item Some commands are defined only within certain environments.
-  \item Some commands behave differently in different environments.
-\end{itemize}
-\end{itemize}
-\end{block}
-\begin{center}
-\fbox{\href{http://ctan.org/}{The Comprehensive \TeX Archive Network (CTAN)}}
-\end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Typography tweaks}
-\begin{frame}{\insertsubsection}
-\begin{tabular}{lll}
-& character name & used mainly for \ldots \\\hline
-\bftt{\bs} & backslash                 & commands, tables \\
-\bftt{\{}  & open brace                & commands \\
-\bftt{\}}  & close brace               & commands \\
-\bftt{\%}  & percent sign              & comments \\
-\bftt{\#}  & hash (pound / sharp) sign & custom commands \\
-\bftt{\$}  & dollar sign               & equations \\
-\bftt{\_}  & underscore                & equations (subscripts) \\
-\bftt{\^}  & caret                     & equations (superscripts) \\
-\bftt{\&}  & ampersand                 & tables \\
-\bftt{\~}  & tilde                     & spacing \\
-\end{tabular}
-\end{frame}
-
-%\item We've used several environments:
-%\vskip 1ex
-%{\scriptsize
-%\begin{tabular}{ll}
-%\cmdbs{begin}\bftt{\{document\}}\ldots\cmdbs{end}\bftt{\{document\}} &
-%  document environment \\
-%\cmdbs{begin}\bftt{\{itemize\}}\ldots\cmdbs{end}\bftt{\{itemize\}} &
-%  itemized list environment \\
-%\bftt{\$\ldots\$}     & \emph{in-text} math environment \\
-%\bftt{\$\$\ldots\$\$} & \emph{displayed} math environment \\
-%\cmdbs{begin}\bftt{\{equation\}}\ldots\cmdbs{end}\bftt{\{equation\}} &
-%  displayed math environment w/ number
-%\end{tabular}
-%}

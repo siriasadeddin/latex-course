@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}beamer\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}title}\PYG{n+nb}{\PYGZob{}}Bienvenidos a Beamer\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}author}\PYG{n+nb}{\PYGZob{}}A. Autor\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}institute}\PYG{n+nb}{\PYGZob{}}Universidad \PYGZhy{} Facultad\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}date}\PYG{n+nb}{\PYGZob{}}Fecha de la presentaci\PYG{k}{\PYGZbs{}\PYGZsq{}}on\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}frame\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}titlepage} \PYG{c}{\PYGZpc{} El \PYGZbs{}maketitle}
+           \PYG{c}{\PYGZpc{} de Beamer}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}frame\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

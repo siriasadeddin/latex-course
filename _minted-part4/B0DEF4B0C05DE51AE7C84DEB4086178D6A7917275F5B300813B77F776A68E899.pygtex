@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}thebibliography\PYG{n+nb}{\PYGZcb{}\PYGZob{}}1\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}bibitem}\PYG{n+nb}{\PYGZob{}}lamport94\PYG{n+nb}{\PYGZcb{}}
+  Leslie Lamport,
+  \PYG{k}{\PYGZbs{}emph}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}LaTeX}: a document preparation system\PYG{n+nb}{\PYGZcb{}},
+  Addison Wesley, Massachusetts,
+  2nd edition,
+  1994.
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}thebibliography\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

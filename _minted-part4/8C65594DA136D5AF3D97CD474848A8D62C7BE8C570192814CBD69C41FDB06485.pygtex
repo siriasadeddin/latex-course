@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[a5paper]}\PYG{n+nb}{\PYGZob{}}report\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}kantlipsum\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}pagestyle}\PYG{n+nb}{\PYGZob{}}myheadings\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}markright}\PYG{n+nb}{\PYGZob{}}Nombre y Apellido\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}title}\PYG{n+nb}{\PYGZob{}}Informe\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}author}\PYG{n+nb}{\PYGZob{}}Alumno\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}maketitle}
+
+\PYG{k}{\PYGZbs{}chapter}\PYG{n+nb}{\PYGZob{}}Introducci\PYG{k}{\PYGZbs{}\PYGZsq{}}on\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}kant}\PYG{n+na}{[1\PYGZhy{}6]}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Antecedentes\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}kant}\PYG{n+na}{[6\PYGZhy{}10]}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

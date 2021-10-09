@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[a5paper]}\PYG{n+nb}{\PYGZob{}}report\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}kantlipsum,graphicx,lastpage\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}fancyhdr\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}pagestyle}\PYG{n+nb}{\PYGZob{}}fancy\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}title}\PYG{n+nb}{\PYGZob{}}Informe\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}author}\PYG{n+nb}{\PYGZob{}}Alumno\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}lhead}\PYG{n+nb}{\PYGZob{}}Nombre y Apellido\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}chead}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}includegraphics}\PYG{n+na}{[width=0.02\PYGZbs{}textwidth]}
+\PYG{n+nb}{\PYGZob{}}es/images/logoUTN\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}rhead}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}today}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}lfoot}\PYG{n+nb}{\PYGZob{}}Prof: Nombre y Apellido\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}cfoot}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}thepage}\PYG{n+nb}{\PYGZob{}\PYGZcb{}} de \PYG{k}{\PYGZbs{}pageref}\PYG{n+nb}{\PYGZob{}}LastPage\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}rfoot}\PYG{n+nb}{\PYGZob{}}Universidad \PYGZhy{}\PYGZhy{} Facultad\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}headrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.4pt\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}renewcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}footrulewidth}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}0.4pt\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}maketitle}
+\PYG{k}{\PYGZbs{}chapter}\PYG{n+nb}{\PYGZob{}}Introducci\PYG{k}{\PYGZbs{}\PYGZsq{}}on\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}kant}\PYG{n+na}{[1\PYGZhy{}6]}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Antecedentes\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}kant}\PYG{n+na}{[6\PYGZhy{}10]}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

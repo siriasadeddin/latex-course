@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}frame\PYG{n+nb}{\PYGZcb{}}[fragile]
+  \PYG{k}{\PYGZbs{}frametitle}\PYG{n+nb}{\PYGZob{}}Presentaciones con beamer: Diapositivas\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+  \PYG{k}{\PYGZbs{}item} Utilice \PYG{k}{\PYGZbs{}cmdbs}\PYG{n+nb}{\PYGZob{}}frametitle\PYG{n+nb}{\PYGZcb{}} para darle un t\PYG{k}{\PYGZbs{}\PYGZsq{}}itulo al cuadro.
+  \PYG{k}{\PYGZbs{}item} Luego agregue contenido a la diapositiva.
+  \PYG{k}{\PYGZbs{}item} El c\PYG{k}{\PYGZbs{}\PYGZsq{}}odigo para esta diapositiva se ve ...
+  \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}frame\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

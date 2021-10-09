@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}lstlisting\PYG{n+nb}{\PYGZcb{}}
+  \PYGZsh{}include\PYGZlt{}stdio.h\PYGZgt{}
+
+  int main()
+  \PYG{n+nb}{\PYGZob{}}
+    printf(\PYGZdq{}Hello World\PYGZdq{});
+    return 0;
+  \PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}lstlisting\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}
